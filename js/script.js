@@ -1,10 +1,13 @@
 //When website is finished loading execute the following code ** activate superslides
 $(document).ready(function () {
+  //superslides init
   $("#slides").superslides({
     animation: "fade",
     play: 3000,
     pagination: false,
   });
+
+  //typed init
   var typed = new Typed(".typed", {
     strings: ["Full Stack Web Developer", "Web3 Developer", "Data Analyst"],
     typeSpeed: 70,
@@ -13,6 +16,7 @@ $(document).ready(function () {
     showCursor: false,
   });
 
+  //owl carousel init
   $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
@@ -28,5 +32,10 @@ $(document).ready(function () {
         items: 5,
       },
     },
+  });
+
+  //easy chart init
+  $(".chart").easyPieChart({
+    //your options goes here
   });
 });
