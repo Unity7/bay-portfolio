@@ -68,7 +68,8 @@ body {
   max-width: 100%;
 }
 
-.skillsSection {
+.skillsSection,
+.contactSection {
   background-color: #e74c3c;
   color: #fff;
 }
