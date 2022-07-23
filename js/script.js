@@ -1,3 +1,16 @@
+//loader
+$(window).on("load", function () {
+  $(".loader .inner").fadeOut(500, function () {
+    $(".loader").fadeOut(750, function () {});
+  });
+
+  //isotype filter init
+  $(".items").isotope({
+    filter: "*",
+    animationOptions: { duration: 1500, easing: "linear", queue: false },
+  });
+});
+
 //When website is finished loading execute the following code ** activate superslides
 $(document).ready(function () {
   //superslides init
@@ -75,12 +88,6 @@ $(document).ready(function () {
 
   //fancy box init
   $("[data-fancybox]").fancybox();
-
-  //isotype filter init
-  $(".items").isotope({
-    filter: "*",
-    animationOptions: { duration: 1500, easing: "linear", queue: false },
-  });
 
   //filters
   $("#filters a").click(function () {
