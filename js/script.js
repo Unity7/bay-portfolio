@@ -81,4 +81,23 @@ $(document).ready(function () {
     filter: "*",
     animationOptions: { duration: 1500, easing: "linear", queue: false },
   });
+
+  //filters
+  $("#filters a").click(function () {
+    //remove the current filter tag
+    $("#filters .current").removeClass("current");
+
+    //add the clicked value tag to current
+    $(this).addClass("current");
+
+    //get the class of the clicked filter
+    var selector = $(this).attr("data-filter");
+
+    //call isotope to filter for the clicked value
+    $(".items").isotope({
+      filter: selector,
+      animationOptions: { duration: 1500, easing: "linear", queue: false },
+    });
+    return false;
+  });
 });
