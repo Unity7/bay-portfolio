@@ -310,3 +310,42 @@ body {
 .copyrightSection p {
   margin: 0;
 }
+
+#navigation {
+  background-color: #e74c3c;
+  padding: 20px 10px;
+  z-index: 100;
+}
+
+#navigation li {
+  padding: 0 10px;
+}
+
+#navigation li a {
+  color: #fff;
+}
+
+#navigation .navbar-brand {
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  background: url(../img/icons/menu2.png);
+  background-size: 100%;
+  border-color: #e74c3c;
+  border: none;
+  border-width: 0;
+  border: 0;
+}
+
+.navbar-toggler {
+  border-color: #e74c3c;
+  border: none;
+  border-width: 0;
+  border: 0;
+}
+
+.fixedNav #navigation {
+  position: fixed;
+  top: 0;
+}

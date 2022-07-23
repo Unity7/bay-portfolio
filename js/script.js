@@ -100,4 +100,19 @@ $(document).ready(function () {
     });
     return false;
   });
+
+  const nav = $("#navigation");
+  const navTop = nav.offset().top;
+  $(window).on("scroll", stickyNavigation);
+
+  function stickyNavigation() {
+    var body = $("body");
+
+    //if scroll is past the position of navTop add class
+    if ($(window).scrollTop() >= navTop) body.addClass("fixedNav");
+    else {
+      //if not remove class
+      body.removeClass("fixedNav");
+    }
+  }
 });
