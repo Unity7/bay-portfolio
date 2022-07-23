@@ -109,10 +109,20 @@ $(document).ready(function () {
     var body = $("body");
 
     //if scroll is past the position of navTop add class
-    if ($(window).scrollTop() >= navTop) body.addClass("fixedNav");
-    else {
+    if ($(window).scrollTop() >= navTop) {
+      body.css("padding-top", nav.outerHeight() + "px");
+      body.addClass("fixedNav");
+    } else {
       //if not remove class
+      body.css("padding-top", 0);
       body.removeClass("fixedNav");
     }
   }
+
+  $("#navigation li a").click(function (e) {
+    e.preventDefault();
+    var targetElement = $(this).attr("href");
+    var targetPosition = $(targetElement).offset().top;
+    $("html, body").animate({ scrollTop: targetPosition - 50 }, 100);
+  });
 });
